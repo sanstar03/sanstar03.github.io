@@ -2,6 +2,7 @@
 <html>
     <style>
         .result {
+        
         text-align: center;
         background-color: lightgrey;
         width: 300px;
@@ -102,31 +103,29 @@
         text-align: center;
         bottom: -400px;
         right: 0px;
-
         }
      </style>
 <body>
-    
-    <h1 align ="center">Start</h1>
+    <h1 align ="center">Scanning</h1>
     <div class="wrapper1">
-    <p1 class = "result">Welcome</p1>
+    <p1 class = "result">Robot ทำการ Scan เจอตู้สำหรับจ่ายอาหาร,ยา และน้ำ สำหรับผู้ป่วย</p1>
     </div>
     
     <div class="wrapper">
-    <button onclick="window.location.href = '/move'" class="button">Move</button>
-    <button class="stopbutton">Stop</button>
-    
-    <div class="wrapper">
-    <button onclick="window.location.href = '/show'" class="showbutton">Show</button>
-    <button onclick="window.location.href = '/check'" class="checkbutton">Check</button>
+    <button class="button">Move</button>
+    <button onclick="window.location.href = '/scan/stop'" class="stopbutton">Stop</button>
     
 
     <div class="wrapper">
-    <button onclick="window.location.href = '/open'" class="openbutton">Open</button>
+    <button class="showbutton">Show</button>
+    <button class="checkbutton">Check</button>
+    </div>
+
+    <div class="wrapper">
+    <button class="openbutton">Open</button>
     <button class="offbutton">Close</button>
     <button class="codebutton">Code</button>
     
-
 
 </body>
 </html>

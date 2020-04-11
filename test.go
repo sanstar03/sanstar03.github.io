@@ -27,6 +27,35 @@ func main() {
 	router.HandleFunc("/File", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "name.txt")
 	})
+	router.HandleFunc("/move", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "scan.html")
+	})
+	router.HandleFunc("/scan/stop", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "passwordreq.html")
+	})
+	router.HandleFunc("/scan/stop/code", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "correctpass.html")
+	})
+
+	router.HandleFunc("/scan/stop/code/open", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "openrobot.html")
+	})
+	router.HandleFunc("/scan/stop/code/open/close", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "robotready.html")
+	})
+	router.HandleFunc("/scan/stop/code/open/close/move", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "robotmoveafterclose.html")
+	})
+
+	router.HandleFunc("/check", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "fistcheck.html")
+	})
+	router.HandleFunc("/show", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "firstshow.html")
+	})
+	router.HandleFunc("/secondcheck", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "secondcheck.html")
+	})
 
 	router.HandleFunc("/user/{name}", func(w http.ResponseWriter, r *http.Request) {
 		vars := mux.Vars(r)
